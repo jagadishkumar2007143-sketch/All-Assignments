@@ -1,0 +1,17 @@
+import numpy as np
+
+# Sample data
+x = [1, 2, 3]
+y = [2, 4, 6]
+
+# Find correlation
+corr = np.corrcoef(x, y)[0, 1]
+
+print("Correlation =", corr)
+
+if corr > 0:
+    print("Probability of Positive Correlation = 1")
+elif corr < 0:
+    print("Probability of Negative Correlation = 1")
+else:
+    print("Probability of Zero Correlation = 1")
