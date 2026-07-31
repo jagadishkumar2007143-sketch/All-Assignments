@@ -1,0 +1,80 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+#Create a custom dataset using dictionary
+data = {
+    "Student": [" VJK", " Chenna", "Narendra", " Sai", "Siri", " BSH", " YCK", "ANR"],
+    "Math": [85, 78, 92, 88, 76, 95, 81, 89],
+    "Science": [90, 82, 91, 85, 79, 94, 80, 87],
+    "English": [88, 75, 89, 90, 81, 93, 84, 86]
+}
+
+# Convert dictionary to DataFrame
+df = pd.DataFrame(data)
+
+# Display dataset
+print("Dataset:")
+print(df)
+
+#Data Analysis using Pandas
+print("\nFirst 5 Rows:")
+print(df.head())
+
+print("\nDataset Information:")
+print(df.info())
+
+print("\nStatistical Summary:")
+print(df.describe())
+
+# Add Total and Average columns
+df["Total"] = df["Math"] + df["Science"] + df["English"]
+df["Average"] = df["Total"] / 3
+
+print("\nUpdated Dataset:")
+print(df)
+
+#  Bar Chart
+
+plt.figure(figsize=(8,5))
+plt.bar(df["Student"], df["Average"])
+plt.title("Average Marks of Students")
+plt.xlabel("Students")
+plt.ylabel("Average Marks")
+plt.grid(axis='y')
+plt.show()
+
+ 
+#Line Chart
+ 
+plt.figure(figsize=(8,5))
+plt.plot(df["Student"], df["Math"], marker='o', label="Math")
+plt.plot(df["Student"], df["Science"], marker='s', label="Science")
+plt.plot(df["Student"], df["English"], marker='^', label="English")
+plt.title("Subject-wise Marks")
+plt.xlabel("Students")
+plt.ylabel("Marks")
+plt.legend()
+plt.grid(True)
+plt.show()
+
+ 
+#Scatter Plot
+
+plt.figure(figsize=(6,5))
+plt.scatter(df["Math"], df["Science"])
+plt.title("Math vs Science Marks")
+plt.xlabel("Math Marks")
+plt.ylabel("Science Marks")
+plt.grid(True)
+plt.show()
+
+ 
+# Histogram
+ 
+plt.figure(figsize=(6,5))
+plt.hist(df["Average"], bins=5)
+plt.title("Distribution of Average Marks")
+plt.xlabel("Average Marks")
+plt.ylabel("Frequency")
+plt.grid(True)
+plt.show()
