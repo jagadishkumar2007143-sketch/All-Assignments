@@ -1,0 +1,20 @@
+pA = 0.4
+pB = 0.5
+pAB = 0.2
+
+union = pA + pB - pAB
+print("Addition Rule =", union)
+
+# Exclusive Event Rule
+exclusive = pA + pB
+print("Exclusive Event Rule =", exclusive)
+
+# Complement Rule
+complement = 1 - pA
+print("Complement Rule =", complement)
+
+# Multiplication Rule
+pB_given_A = 0.3
+
+multiply = pA * pB_given_A
+print("Multiplication Rule =", multiply)
