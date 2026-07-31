@@ -1,0 +1,67 @@
+import numpy as np
+
+# Create vectors
+A = np.array([10, 20, 30, 40])
+B = np.array([1, 2, 3, 4])
+
+print("Vector A =", A)
+print("Vector B =", B)
+
+# -----------------------------
+# Arithmetic Operations
+# -----------------------------
+print("\nArithmetic Operations")
+print("Addition       :", A + B)
+print("Subtraction    :", A - B)
+print("Multiplication :", A * B)
+print("Division       :", A / B)
+print("Floor Division :", A // B)
+print("Modulus        :", A % B)
+print("Power          :", A ** B)
+
+# -----------------------------
+# Mathematical Operations
+# -----------------------------
+print("\nMathematical Operations")
+print("Square of A    :", np.square(A))
+print("Square Root    :", np.sqrt(A))
+print("Exponential    :", np.exp(B))
+print("Logarithm      :", np.log(A))
+print("Sine           :", np.sin(A))
+print("Cosine         :", np.cos(A))
+print("Tangent        :", np.tan(A))
+print("Absolute       :", np.abs([-5, 8, -10]))
+print("Maximum        :", np.max(A))
+print("Minimum        :", np.min(A))
+print("Sum            :", np.sum(A))
+print("Mean           :", np.mean(A))
+print("Median         :", np.median(A))
+print("Standard Dev   :", np.std(A))
+
+# -----------------------------
+# Broadcasting Operations
+# -----------------------------
+print("\nBroadcasting Operations")
+
+# Add scalar to vector
+print("A + 5 =", A + 5)
+
+# Multiply vector by scalar
+print("A * 2 =", A * 2)
+
+# Matrix Broadcasting
+matrix = np.array([[1, 2, 3], [4, 5, 6]])
+
+vector = np.array([10, 20, 30])
+
+print("\nMatrix =")
+print(matrix)
+
+print("\nVector =")
+print(vector)
+
+print("\nMatrix + Vector =")
+print(matrix + vector)
+
+print("\nMatrix * Vector =")
+print(matrix * vector)
